@@ -84,7 +84,7 @@ If we are going to have a connection from the outside, we need to know the port.
 
 --name rstudio: The name of the container |Kode: Password It is easier to use the name of the container when writing. The container also has a much longer name. 
 
--v rstudio_data:/home/rstudio: Mount the volume “rstudio_data“to the container path“/home/rstudio“
+-v rstudio_data:/home/rstudio: Mount the volume “rstudio_data“to the container path“/home/rstudio“ Shared volume. 
 
 rocker/rstudio: The name of the image that you use to install and run the docker container
 
