@@ -15,7 +15,31 @@ This document provides an overview of basic Docker commands. Each command is acc
 6. [.tar files](#.tar-files)
 7. [Dockerfile Example for RStudio Setup](#dockerfile-example-for-rStudio-setup)
 
+
 ---
+## Linux Commands 
+**Print working directory** - This displays the working directory. Can also be checked in your filezilla. 
+
+```bash
+pwd
+```
+
+**List directory contents**
+Example ls -l
+This lists detailed information about files and directories in the current directory in the current directory
+
+```bash
+ls
+```
+
+**Change Directory**
+Goes to parent folder (remember space and two dots)
+Example cd usr/
+This changes the current directory to the specified directory 
+
+```bash
+cd
+```
 
 ## Installing Docker
 
