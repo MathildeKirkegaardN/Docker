@@ -49,7 +49,7 @@ docker ps
 ```
 ---
 #### `docker ps -a`
-Lists all containers, including the stopped and paused ones.
+Lists all containers, including the stopped and paused ones. The status exited appears if the containers are stopped
 ```bash
 docker ps -a
 ```
@@ -95,6 +95,8 @@ docker exec -it rstudio /bin/bash
 Removes a stopped Docker container.
 
 **General Syntax**
+
+docker rm removes a container in a created state. 
 ```bash
 docker rm [CONTAINER]
 ```
