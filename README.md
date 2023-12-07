@@ -73,6 +73,21 @@ Runs a Docker container.
 ```bash
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 ```
+dockerrun: start a container
+
+-d: run in detach mode (the container runs in the background and do not tie 	up your terminal) means that the container doesn’t block your terminal from 	doing other things.
+
+-p 8787:8787: The first 8787 is the host machine port, and the next 8787 is the port for the container. We map from the host machine port to the container port. Hence, when you access the host and specify that you connect to port 8787 (E.g., “droplet_IP:8787”) Docker will redirect traffic to the container.
+If we are going to have a connection from the outside, we need to know the port. When we have a connection from the host machine to port 8787, we will be connected to the container.
+
+-e PASSWORD = [your_password]: Set the password for logging in to Rstudio
+
+--name rstudio: The name of the container |Kode: Password It is easier to use the name of the container when writing. The container also has a much longer name. 
+
+-v rstudio_data:/home/rstudio: Mount the volume “rstudio_data“to the container path“/home/rstudio“
+
+rocker/rstudio: The name of the image that you use to install and run the docker container
+
 **Example**
 ```bash
 docker run -d -p 8787:8787 -e PASSWORD=au_dm_dv_student! --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
